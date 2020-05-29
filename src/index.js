@@ -6,7 +6,7 @@
  */
 
 'use strict';
-import "./pages/index.css";
+import "./style.css";
 
 import {Api} from "./js/Api.js";
 import {CardList} from "./js/CardList.js";
