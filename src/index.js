@@ -6,6 +6,15 @@
  */
 
 'use strict';
+import "./pages/index.css";
+
+import {Api} from "./js/Api.js";
+import {CardList} from "./js/CardList.js";
+import {UserInfo} from "./js/UserInfo.js";
+import {Popup} from "./js/Popup.js";
+import {templateNewCard, templateEditProfile, templateViewImage} from "./js/templates.js";
+import {FormValidator} from "./js/FormValidator.js";
+import {ImgPopup} from "./js/ImgPopup.js";
 
 //                                                               Переменные
 const root = document.querySelector('.root');
