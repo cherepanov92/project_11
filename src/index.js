@@ -10,6 +10,7 @@ import "./style.css";
 
 import {Api} from "./js/Api.js";
 import {CardList} from "./js/CardList.js";
+import {Card} from "./js/Card.js";
 import {UserInfo} from "./js/UserInfo.js";
 import {Popup} from "./js/Popup.js";
 import {templateNewCard, templateEditProfile, templateViewImage} from "./js/templates.js";

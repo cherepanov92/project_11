@@ -1,5 +1,5 @@
 'use strict';
-
+import {Popup} from "./Popup.js";
 // Класс для всплывающего окна.
 export class ImgPopup extends Popup {
   // Добавьте ему методы open и close, чтобы показывать и скрывать попап.
