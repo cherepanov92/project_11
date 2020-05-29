@@ -1,7 +1,7 @@
 'use strict';
 
 // Класс для всплывающего окна.
-class ImgPopup extends Popup {
+export class ImgPopup extends Popup {
   // Добавьте ему методы open и close, чтобы показывать и скрывать попап.
 
   open(imgUrl) {

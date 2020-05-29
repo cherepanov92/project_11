@@ -1,7 +1,7 @@
 'use strict';
 
 // Класс, создающий карточку.
-class Card {
+export class Card {
   constructor(data) {
     this.template = this._getTemplate(data);
   }

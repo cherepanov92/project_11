@@ -1,7 +1,7 @@
 'use strict';
 
 // Класс для хранения и отрисовки карточек.
-class CardList {
+export class CardList {
   constructor(cardContainer, cardList = []) {
     this.cardContainer = cardContainer;
     this.cardList = cardList;

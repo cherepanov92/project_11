@@ -1,4 +1,5 @@
-const templateNewCard = `<div class="popup" id="newCard">
+'use strict';
+export const templateNewCard = `<div class="popup" id="newCard">
                             <div class="popup__content">
                             <img src="./images/close.svg" alt="" class="popup__close">
                             <h3 class="popup__title">Новое место</h3>
@@ -12,7 +13,7 @@ const templateNewCard = `<div class="popup" id="newCard">
                             </div>
                         </div>`
 
-const templateEditProfile = `<div class="popup" id='editProfile'>
+export const templateEditProfile = `<div class="popup" id='editProfile'>
                                 <div class="popup__content">
                                     <img src="./images/close.svg" alt="" class="popup__close">
                                     <h3 class="popup__title">Редактировать профиль</h3>
@@ -26,9 +27,12 @@ const templateEditProfile = `<div class="popup" id='editProfile'>
                                 </div>
                             </div>`
 
-const templateViewImage = `<div class="popup" id="viewImage">
+export const templateViewImage = `<div class="popup" id="viewImage">
                                 <div class="popup__image">
                                     <img src="./images/close.svg" alt="" class="popup__close">
                                     <img alt="" class="popup_img">
                                 </div>
                             </div>`
+
+
+// export {templateNewCard, templateEditProfile, templateViewImage};

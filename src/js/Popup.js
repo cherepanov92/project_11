@@ -1,7 +1,7 @@
 'use strict';
 
 // Класс для всплывающего окна.
-class Popup {
+export class Popup {
   // Добавьте ему методы open и close, чтобы показывать и скрывать попап.
   constructor(template, container) {
     this.popup = null;
