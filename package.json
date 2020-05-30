@@ -1,5 +1,6 @@
 {
   "name": "yp_project_11",
+  "homepage": "https://cherepanov92.github.io/project_11/",
   "version": "0.0.1",
   "description": "",
   "main": "script.js",
@@ -17,7 +18,6 @@
   "bugs": {
     "url": "https://github.com/cherepanov92/yp_project_11/issues"
   },
-  "homepage": "https://github.com/cherepanov92/yp_project_11#readme",
   "devDependencies": {
     "@babel/cli": "^7.10.1",
     "@babel/core": "^7.10.1",
@@ -28,6 +28,7 @@
     "css-loader": "^3.5.3",
     "cssnano": "^4.1.10",
     "file-loader": "^6.0.0",
+    "gh-pages": "^2.2.0",
     "html-webpack-plugin": "^4.3.0",
     "image-webpack-loader": "^6.0.0",
     "mini-css-extract-plugin": "^0.9.0",
