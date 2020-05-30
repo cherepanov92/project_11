@@ -10,31 +10,42 @@ module.exports = {
         filename: '[name].[chunkhash].js'
     },
     module: {
-        rules: [
-            {
-                test: /\.js$/,
-                exclude: /node_modules/,
-                use: {
-                    loader: "babel-loader"
-                }
-            },
-            {
-              test: /\.css$/,
-              use:  [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader']
-            },
-            {
-              test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
-              use: [
-                {
-                  loader: 'file-loader',
-                  options: {
-                    name: '[name].[ext]',
-                    outputPath: 'fonts/'
-                  }
-                }
-              ]
+      rules: [
+        {
+            test: /\.js$/,
+            exclude: /node_modules/,
+            use: {
+                loader: "babel-loader"
             }
-        ]
+        },
+        {
+          test: /\.css$/,
+          use:  [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader']
+        },
+        {
+          test: /\.(png|jpg|gif|ico|svg)$/i,
+          use: [
+            {
+              loader: 'file-loader',
+              options: {
+                  name: '[name].[ext]',
+                  publicPath: 'images',
+                  outputPath: 'images',
+                  useRelativePath: true,
+                  esModule: false,
+              }
+            },
+            {
+              loader: 'image-webpack-loader',
+              options: {}
+            }
+          ]
+        },
+        {
+          test: /\.(eot|ttf|woff|woff2)$/,
+          loader: 'file-loader?name=./vendor/fonts/[name].[ext]'
+        }
+      ]
     },
     plugins: [
         new MiniCssExtractPlugin({
