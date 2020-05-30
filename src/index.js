@@ -8,7 +8,7 @@
 'use strict';
 import "./style.css";
 
-import {Api} from "./js/Api.js";
+import {Api} from "./js/API.js";
 import {CardList} from "./js/CardList.js";
 import {Card} from "./js/Card.js";
 import {UserInfo} from "./js/UserInfo.js";
