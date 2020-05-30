@@ -13,7 +13,6 @@ import {CardList} from "./js/CardList.js";
 import {Card} from "./js/Card.js";
 import {UserInfo} from "./js/UserInfo.js";
 import {Popup} from "./js/Popup.js";
-import {templateNewCard, templateEditProfile, templateViewImage} from "./js/templates.js";
 import {FormValidator} from "./js/FormValidator.js";
 import {ImgPopup} from "./js/ImgPopup.js";
 
@@ -30,18 +29,18 @@ const userInfo = new UserInfo(domName, domJob);
 
 // Модальное окно "создание карточки"
 const newCardBtn = root.querySelector('.user-info__button');
-const newCardPopup = new Popup(templateNewCard, root);
+const newCardPopup = new Popup(document.querySelector('#newCard'));
 const newCardForm = newCardPopup.popup.querySelector('.popup__form');
 const newCardValidator = new FormValidator(newCardPopup.popup.querySelector('.popup__form'));
 
 // Модальное окно "редактирование профиля"
 const editProfileBtn = root.querySelector('.user-info__button_edit');
-const editProfilePopup = new Popup(templateEditProfile, root);
+const editProfilePopup = new Popup(document.querySelector('#editProfile'));
 const editProfileForm = editProfilePopup.popup.querySelector('.popup__form');
 const editProfileValidator = new FormValidator(editProfileForm);
 
 // Модальное окно "картинка карточки"
-const ViewImagePopup = new ImgPopup(templateViewImage, root);
+const ViewImagePopup = new ImgPopup(document.querySelector('#viewImage'));
 
 //                                                               Функции
 
