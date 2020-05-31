@@ -1,5 +1,7 @@
 'use strict';
-const isDev = process.env.NODE_ENV === 'development';
+const isDev = NODE_ENV === 'development';
+
+console.log('environment', NODE_ENV);
 
 export class Api {
   constructor() {
