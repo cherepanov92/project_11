@@ -1,12 +1,10 @@
 'use strict';
 
 // Класс для всплывающего окна.
-class Popup {
+export class Popup {
   // Добавьте ему методы open и close, чтобы показывать и скрывать попап.
-  constructor(template, container) {
-    this.popup = null;
-    this.template = template;
-    this.container = container;
+  constructor(popupObj) {
+    this.popup = popupObj;
     this.popupForm = null;
     this.error_spans = null;
     this._create();
@@ -14,16 +12,9 @@ class Popup {
   }
 
   _create() {
-    const popupDom = document.createElement("div");
-    // Можно лучше -- чтобы не создавать лишних оберток,
-    // используйте Fragment https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment
-    popupDom.insertAdjacentHTML('beforeend', this.template);
-
-    this.popup = popupDom.firstElementChild;
     this.popupForm = this.popup.querySelector(".popup__form");
     this.error_spans = this.popupForm ? this.popupForm.querySelectorAll("span") : null;
     this.closeBtn = this.popup.querySelector('.popup__close');
-    this.container.appendChild(this.popup);
   }
 
   open() {

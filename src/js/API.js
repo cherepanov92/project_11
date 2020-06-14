@@ -1,13 +1,18 @@
 'use strict';
+const isDev = NODE_ENV === 'development';
 
-class Api {
+console.log('environment', NODE_ENV);
+
+export class Api {
   constructor() {
     this.token = "4be4432e-ebc8-4811-a3f6-44d3010745a9";
     this.cohortId = "cohort10";
-    this.baseUrl = `https://praktikum.tk/${this.cohortId}/`;
+    this.baseUrl = isDev ? `http://praktikum.tk/${this.cohortId}/`: `https://praktikum.tk/${this.cohortId}/`;
+    
     this.baseRequest = {
       headers: {
-          Authorization: this.token
+          Authorization: this.token,
+          'Content-Type': 'application/json'
       },
     }
   }

@@ -1,7 +1,7 @@
 'use strict';
 
 // Класс для валидации полей формы.
-class FormValidator {
+export class FormValidator {
   constructor(popupForm) {
     this.popupForm = popupForm;
     this.form = this.popupForm;
